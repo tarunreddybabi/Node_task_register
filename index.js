@@ -6,7 +6,7 @@ app.use(express.json());
 
 const localStorage = new LocalStorage("./start");
 
-app.post("/register", (req, res) => {
+app.post("/", (req, res) => {
   const newUser = req.body;
   if (!newUser || !newUser.username || !newUser.email) {
     res
